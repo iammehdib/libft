@@ -6,7 +6,7 @@
 /*   By: mbuchet <mbuchet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 20:56:00 by mbuchet           #+#    #+#             */
-/*   Updated: 2026/03/20 16:22:46 by mbuchet          ###   ########.fr       */
+/*   Updated: 2026/03/20 16:29:27 by mbuchet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t	index;
+	size_t			index;
 	unsigned char	c_unsigned;
 	unsigned char	*str_unsigned;
 
