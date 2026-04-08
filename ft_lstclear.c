@@ -6,7 +6,7 @@
 /*   By: mbuchet <mbuchet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 15:46:58 by mbuchet           #+#    #+#             */
-/*   Updated: 2026/04/07 16:49:12 by mbuchet          ###   ########.fr       */
+/*   Updated: 2026/04/08 11:11:37 by mbuchet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	while (linked_list)
 	{
 		current_linked_list = linked_list;
+		linked_list = linked_list->next;
 		del(current_linked_list->content);
 		free(current_linked_list);
-		linked_list = linked_list->next;
 	}
-	free(lst);
+	*lst = NULL;
 }
