@@ -6,12 +6,11 @@
 /*   By: mbuchet <mbuchet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/21 22:27:11 by mbuchet           #+#    #+#             */
-/*   Updated: 2026/03/21 22:37:36 by mbuchet          ###   ########.fr       */
+/*   Updated: 2026/04/08 20:23:26 by mbuchet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string.h"
-#include <stddef.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
