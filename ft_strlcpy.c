@@ -6,14 +6,14 @@
 /*   By: mbuchet <mbuchet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/21 10:54:35 by mbuchet           #+#    #+#             */
-/*   Updated: 2026/03/21 11:51:19 by mbuchet          ###   ########.fr       */
+/*   Updated: 2026/04/08 19:02:54 by mbuchet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <strings.h>
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *restrict src, size_t dsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dsize)
 {
 	size_t	index;
 
