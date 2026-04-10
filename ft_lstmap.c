@@ -6,7 +6,7 @@
 /*   By: mbuchet <mbuchet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 15:15:52 by mbuchet           #+#    #+#             */
-/*   Updated: 2026/04/08 15:28:28 by mbuchet          ###   ########.fr       */
+/*   Updated: 2026/04/10 17:58:15 by mbuchet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	if (lst == NULL || f == NULL || del == NULL)
 		return (lst);
 	linked_list = lst;
+	current_linked_list = NULL;
 	while (current_linked_list)
 	{
 		current_linked_list = ft_lstnew(current_linked_list->content);
