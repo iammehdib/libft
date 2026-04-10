@@ -6,8 +6,9 @@ libft est une librairie utilitaires en language C qui reprend pleins de fonction
 
 # Instructions
 
-Pour compiler le projet il suffit d'éxecuter `make` dans la console dans le dossier root et le fichier attendu nommé `libft.a` sera crée.
+Pour compiler le projet il suffit d'éxecuter `make` dans la console dans le dossier root et le fichier attendu nommé `libft.a` sera créée.
 Avant chaque nouvelle compilation, n'oubliez pas d'exécuter `make fclean` pour supprimer les fichiers indésirables de l'ancienne compilation.
+Tester et compiler sur un environnement Ubuntu.
 
 # Resources
 
@@ -58,6 +59,11 @@ Avant chaque nouvelle compilation, n'oubliez pas d'exécuter `make fclean` pour 
 - ft_lstclear: permet de vider tous les éléments d'une liste chaînée
 - ft_lstiter: permet d'itérer sur chaque contenu d'un élément d'une liste chaînée en appliquant un pointeur d'une fonction.
 - ft_lstmap: permet de parcourir une liste chaînée, d'appliquer la fonction f à chaque élément et de créer une nouvelle liste, la fonction del est utilisée si un élément n'arrive pas à être alloué.
+
+## References
+- Sujet du PDF, version 19.2, Libft de 42 Bruxelles.
+- Le man consultées sur Ubuntu (WSL) et Ubuntu à l'école, les quelques fonctions non disponible sur le man en local j'ai chercher sur internet, je n'ai plus les références.
+- Quelques anciens codes fais durant la piscine de 42 Bruxelles, en février 2026.
 
 ## Usage of IA
 Usage de l'IA dans certains cas comme "professeur" en demandant par exemple sur une function si c'est correct sur certains cas de crash possible d'une function en precisant toujours de ne jamais donner de code et de résolution mais avec des explications/indices pour m'y guider, je l'ai utuliser aussi pour quelques traductions du man en francais, les prompts sont généralement sur les modèles GPT.
