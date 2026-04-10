@@ -6,7 +6,7 @@
 /*   By: mbuchet <mbuchet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 14:16:41 by mbuchet           #+#    #+#             */
-/*   Updated: 2026/03/22 20:11:09 by mbuchet          ###   ########.fr       */
+/*   Updated: 2026/04/10 18:32:23 by mbuchet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if ((str_length - start) < len)
 		len = str_length - start;
-	index = 0;
 	str = malloc(sizeof(char) * (len + 1));
 	if (str == NULL)
 		return (NULL);
+	index = 0;
 	while (s[start] && (index < len))
 		str[index++] = s[start++];
 	str[index] = 0;
