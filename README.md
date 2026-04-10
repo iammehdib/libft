@@ -6,7 +6,8 @@ libft est une librairie utilitaires en language C qui reprend pleins de fonction
 
 # Instructions
 
-Soon...
+Pour compiler le projet il suffit d'éxecuter `make` dans la console dans le dossier root et le fichier attendu nommé `libft.a` sera crée.
+Avant chaque nouvelle compilation, n'oubliez pas d'exécuter `make fclean` pour supprimer les fichiers indésirables de l'ancienne compilation.
 
 # Resources
 
