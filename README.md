@@ -27,25 +27,25 @@ Soon...
 - ft_tolower: modifier un caractère d'un alphabet majuscule en miniscule.
 - ft_strchr: trouver un caractère dans une chaine de caractères et retourner à l'index qui se trouve, s'il trouve pas on retourne NULL.
 - ft_strrchr: meme principe que ft_strchr sauf que on ne vérifie pas le dernier index donc la fin d'une chaine de caractère.
-- ft_strncmp: boucle sur les 2 chaine de caractères jusqu'à trouver un caractère non égale à l'autre au meme index en retournant la soustraction du caractère de l'index s1 et s2, si non retourne NULL.
+- ft_strncmp: boucle sur les 2 chaine de caractères jusqu'à trouver un caractère non égale à l'autre au meme index en retournant la soustraction du caractère de l'index s1 et s2 ou si l'index de s1 est égale à 0, si non retourne NULL.
 - ft_memchr: boucle sur les 2 chaine de caractères jusqu'à trouver un caractère égale à l'autre au meme index en retournant le caractère à l'index trouver si non retourne NULL.
-- ft_memcmp: recheck si le code est bon.
-- ft_strnstr: boucler le chaine de caractères `big` jusqu'à trouver respectivement dans l'ordre la suite de caractères de `little` et retourner directement le premier caractère de l'index, si non retourner NULL. 
+- ft_memcmp: boucle sur les 2 chaine de caractères jusqu'à trouver un caractère non égale à l'autre au meme index en retournant la soustraction du caractère de l'index s1 et s2, si non retourne NULL.
+- ft_strnstr: boucler le chaine de caractères `big` jusqu'à trouver respectivement dans l'ordre la suite de caractères de `little` et retourner directement le premier caractère de l'index, si non retourner NULL.
 - ft_atoi: "transformer" une chaine de caractère en un possible nombre en gérant aussi s'il est négative.
 - ft_calloc: proche d'un fonctionnement de malloc, en precisant le nombre de mémoire allouer pour un type (comme on fesait avec sizeof(char) ou sizeof(int) par exemple) et la taille de l'array en retourne l'array crée (basé sur un array de str pour utuliser facilement le ft_memset).
 
 ## Additional functions
 - ft_substr: permet de récuperer une chaine de caractères à un index précis dans une chaine de caractères avec une fin dans sa longueur totale voulu.
 - ft_strjoin: permet de joindre 2 chaines de caractères dans une nouvelle chaine de caractères.
-- ft_strtrim: 
+- ft_strtrim:
 - ft_split:
-- ft_itoa: 
+- ft_itoa:
 - ft_strmapi:
-- ft_striteri: 
-- ft_putchar_fd: 
-- ft_putstr_fd: 
+- ft_striteri:
+- ft_putchar_fd:
+- ft_putstr_fd:
 - ft_putendl_fd:
-- ft_putnbr_fd: 
+- ft_putnbr_fd:
 
 ## Linked list
 - ft_lstnew:
@@ -53,7 +53,7 @@ Soon...
 - ft_lstsize:
 - ft_lstlast:
 - ft_lstadd_back:
-- ft_lstdelone: 
+- ft_lstdelone:
 - ft_lstclear:
 - ft_lstiter:
 - ft_lstmap:

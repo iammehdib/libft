@@ -6,7 +6,7 @@
 /*   By: mbuchet <mbuchet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/21 22:27:11 by mbuchet           #+#    #+#             */
-/*   Updated: 2026/04/10 01:44:44 by mbuchet          ###   ########.fr       */
+/*   Updated: 2026/04/10 02:13:35 by mbuchet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	s2_unsigned = (const unsigned char *) s2;
 	while (index < n)
 	{
-		if (s1_unsigned[index] != s2_unsigned[index])
+		if (s1_unsigned[index] != s2_unsigned[index]  || s1_unsigned[index] == 0)
 			return (s1_unsigned[index] - s2_unsigned[index]);
 		index++;
 	}

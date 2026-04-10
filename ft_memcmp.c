@@ -6,7 +6,7 @@
 /*   By: mbuchet <mbuchet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/21 22:52:47 by mbuchet           #+#    #+#             */
-/*   Updated: 2026/03/21 23:00:36 by mbuchet          ###   ########.fr       */
+/*   Updated: 2026/04/10 02:13:32 by mbuchet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	s2_unsigned = (const unsigned char *) s2;
 	while (index < n)
 	{
-		if (s1_unsigned[index] != s2_unsigned[index] || s1_unsigned[index] == 0)
+		if (s1_unsigned[index] != s2_unsigned[index])
 			return (s1_unsigned[index] - s2_unsigned[index]);
 		index++;
 	}
