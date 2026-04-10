@@ -1,6 +1,6 @@
 NAME = libft.a
 CC = cc
-CFLAGS = -std=c99 -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 SOURCES = ft_calloc.c \
           ft_itoa.c \
 		  ft_lstlast.c \
