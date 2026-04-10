@@ -6,7 +6,7 @@
 /*   By: mbuchet <mbuchet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/20 16:35:49 by mbuchet           #+#    #+#             */
-/*   Updated: 2026/03/20 23:14:58 by mbuchet          ###   ########.fr       */
+/*   Updated: 2026/04/10 18:00:28 by mbuchet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,5 @@ void	ft_bzero(void *s, size_t n)
 	index = 0;
 	str_unsigned = (unsigned char *) s;
 	while (index < n)
-	{
 		str_unsigned[index++] = 0;
-	}
 }
