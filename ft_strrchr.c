@@ -6,7 +6,7 @@
 /*   By: mbuchet <mbuchet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/21 19:25:37 by mbuchet           #+#    #+#             */
-/*   Updated: 2026/03/21 22:14:31 by mbuchet          ###   ########.fr       */
+/*   Updated: 2026/04/13 21:07:37 by mbuchet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,7 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *) &str_unsigned[index]);
 		index--;
 	}
+	if (str_unsigned[index] == char_unsigned)
+		return ((char *) &str_unsigned[index]);
 	return (NULL);
 }
