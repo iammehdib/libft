@@ -6,7 +6,7 @@
 /*   By: mbuchet <mbuchet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 19:32:14 by mbuchet           #+#    #+#             */
-/*   Updated: 2026/04/14 02:08:46 by mbuchet          ###   ########.fr       */
+/*   Updated: 2026/04/14 11:00:02 by mbuchet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,15 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*linked_list;
-	t_list	*last_lst;
+	t_list	*last_linked_list;
 
-	if (new == NULL)
-		return;
+	if (lst == NULL || new == NULL)
+		return ;
 	if (*lst == NULL)
 	{
 		*lst = new;
-		return;
+		return ;
 	}
-	linked_list = *lst;
-	while (linked_list)
-	{
-		last_lst = linked_list;
-		linked_list = linked_list->next;
-	}
-	last_lst->next = new;
+	last_linked_list = ft_lstlast(*lst);
+	last_linked_list->next = new;
 }
