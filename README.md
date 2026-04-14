@@ -28,13 +28,13 @@ Tester et compiler sur un environnement Ubuntu.
 - ft_toupper: modifier un caractère d'un alphabet miniscule en majuscule.
 - ft_tolower: modifier un caractère d'un alphabet majuscule en miniscule.
 - ft_strchr: trouver un caractère dans une chaîne de caractères et retourner à l'index qui se trouve, s'il trouve pas on retourne NULL.
-- ft_strrchr: même principe que ft_strchr sauf que on ne vérifie pas le dernier index donc la fin d'une chaîne de caractère.
-- ft_strncmp: boucle sur les 2 chaîne de caractères jusqu'à trouver un caractère non égale à l'autre au même index en retournant la soustraction du caractère de l'index s1 et s2 ou si l'index de s1 est égale à 0, si non retourne NULL.
-- ft_memchr: boucle sur les 2 chaîne de caractères jusqu'à trouver un caractère égale à l'autre au même index en retournant le caractère à l'index trouver si non retourne NULL.
-- ft_memcmp: boucle sur les 2 chaîne de caractères jusqu'à trouver un caractère non égale à l'autre au même index en retournant la soustraction du caractère de l'index s1 et s2, si non retourne NULL.
+- ft_strrchr: même principe que ft_strchr sauf qu'il vérifie le dernier par le premier.
+- ft_strncmp: boucle sur les 2 chaîne de caractères jusqu'à trouver un caractère non égale à l'autre au même index en retournant la soustraction du caractère de l'index s1 et s2 ou si l'index de s1 est égale à 0, si non retourne 0.
+- ft_memchr: boucle sur une chaîne de caractères jusqu'à trouver un caractère égale à l'autre au même index en retournant le caractère à l'index trouver si non retourne NULL.
+- ft_memcmp: boucle sur les 2 chaîne de caractères jusqu'à trouver un caractère non égale à l'autre au même index en retournant la soustraction du caractère de l'index s1 et s2, si non retourne 0.
 - ft_strnstr: boucler le chaîne de caractères `big` jusqu'à trouver respectivement dans l'ordre la suite de caractères de `little` et retourner directement le premier caractère de l'index, si non retourner NULL.
 - ft_atoi: "transformer" une chaîne de caractères en un possible nombre en gérant aussi s'il est négative.
-- ft_calloc: proche d'un fonctionnement de malloc, en precisant le nombre de mémoire allouer pour un type (comme on fesait avec sizeof(char) ou sizeof(int) par exemple) et la taille de l'array en retourne l'array crée (basé sur un array de str pour utuliser facilement le ft_memset).
+- ft_calloc: proche d'un fonctionnement de malloc, alloue un tableau de 'nmemb' éléments fois sa taille 'size' et remplis tout à zéro.
 
 ## Additional functions
 - ft_substr: permet de récuperer une chaîne de caractères à un index précis dans une chaîne de caractères avec une fin dans sa longueur totale voulu.
@@ -42,9 +42,9 @@ Tester et compiler sur un environnement Ubuntu.
 - ft_strtrim: permet de supprimer le début et fin d'une chaîne de caractères quand c'est possible à partir d'une liste de chaîne de caractères.
 - ft_split: permet diviser une chaîne de caractères en plusieurs tableau de chaîne de caractères à partir d'un séparateur.
 - ft_itoa: permet à partir d'un int de retourner ce nombre dans une chaîne de caractères.
-- ft_strmapi: boucle sur une chaîne de caractères et applique la modification lié au ponteur de la fonction nommé `f` sur chaque caractère de la chaîne.
-- ft_striteri: boucle sur une chaîne de caractères et applique la modification lié au ponteur de la fonction nommé `f` sur chaque caractère de la chaîne en retournant une nouvelle chaîne.
-- ft_putchar_fd: même principe que ft_strmapi, mais modifie la chaîne au lieu d'en créer une nouvelle.
+- ft_strmapi: boucle sur une chaîne de caractères et applique la modification lié au ponteur de la fonction nommé `f` sur chaque caractère de la chaîne en créant une nouvelle chaîne.
+- ft_striteri: même principe que ft_strmapi sauf qu'il ne crée pas de chaîne mais modifie celle actuelle.
+- ft_putchar_fd: écris un caractère dans la console.
 - ft_putstr_fd: permet d'écrire une chaîne de caractères dans la console.
 - ft_putendl_fd: même principe que ft_putstr_fd, ajoute juste une nouvelle ligne à la fin.
 - ft_putnbr_fd: permet d'écrire un nombre dans la console.
