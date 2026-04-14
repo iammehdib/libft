@@ -6,14 +6,14 @@
 /*   By: mbuchet <mbuchet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 20:33:17 by mbuchet           #+#    #+#             */
-/*   Updated: 2026/03/25 01:00:44 by mbuchet          ###   ########.fr       */
+/*   Updated: 2026/04/14 10:19:53 by mbuchet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stddef.h>
 
-int	is_contain_charset(int c, char const *set)
+static int	is_contain_charset(int c, char const *set)
 {
 	size_t	index;
 
