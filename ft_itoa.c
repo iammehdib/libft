@@ -6,7 +6,7 @@
 /*   By: mbuchet <mbuchet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 02:55:00 by mbuchet           #+#    #+#             */
-/*   Updated: 2026/04/14 08:07:15 by mbuchet          ###   ########.fr       */
+/*   Updated: 2026/04/15 19:37:11 by mbuchet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 
 static int	get_itoa_malloc_size(int n)
 {
-	int		index;
-	long	n_long_temp;
+	size_t		index;
+	long		n_long_temp;
 
 	index = 0;
 	n_long_temp = n;
@@ -40,6 +40,8 @@ static char	*get_zero_result_from_itoa(void)
 	char	*str;
 
 	str = malloc(2);
+	if (str == NULL)
+		return (NULL);
 	str[0] = '0';
 	str[1] = 0;
 	return (str);
