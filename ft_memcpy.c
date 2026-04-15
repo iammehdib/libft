@@ -6,7 +6,7 @@
 /*   By: mbuchet <mbuchet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/20 23:16:29 by mbuchet           #+#    #+#             */
-/*   Updated: 2026/03/20 23:55:31 by mbuchet          ###   ########.fr       */
+/*   Updated: 2026/04/15 12:33:41 by mbuchet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char		*dest_unsigned;
 	const unsigned char	*src_unsigned;
 
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	index = 0;
 	dest_unsigned = (unsigned char *)dest;
 	src_unsigned = (const unsigned char *)src;
