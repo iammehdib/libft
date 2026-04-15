@@ -6,7 +6,7 @@
 /*   By: mbuchet <mbuchet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 00:50:02 by mbuchet           #+#    #+#             */
-/*   Updated: 2026/04/14 10:35:21 by mbuchet          ###   ########.fr       */
+/*   Updated: 2026/04/15 14:19:45 by mbuchet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	char	*str;
 
 	if (nmemb == 0 || size == 0)
-		return (malloc(1));
+		return (malloc(0));
 	if (nmemb > SIZE_MAX / size)
 		return (NULL);
 	str = malloc(nmemb * size);
