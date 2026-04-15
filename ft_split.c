@@ -6,7 +6,7 @@
 /*   By: mbuchet <mbuchet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 19:29:31 by mbuchet           #+#    #+#             */
-/*   Updated: 2026/04/14 09:58:35 by mbuchet          ###   ########.fr       */
+/*   Updated: 2026/04/15 18:16:48 by mbuchet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,14 @@ static char	*get_splited_string(int start, const char *str, char charset)
 	return (splited_str);
 }
 
-static void	make_splits(const char *str, char charset, char **r)
+static void	free_split(char **r, int allocated)
+{
+	while (allocated--)
+		free(r[allocated]);
+	free(r);
+}
+
+static int	make_splits(const char *str, char charset, char **r)
 {
 	int		index;
 	int		word_count;
@@ -81,18 +88,24 @@ static void	make_splits(const char *str, char charset, char **r)
 		else
 		{
 			if (charset_mod == 1)
-				r[word_count++] = get_splited_string(index, str, charset);
+			{
+				r[word_count] = get_splited_string(index, str, charset);
+				if (r[word_count] == NULL)
+					return (word_count);
+				word_count++;
+			}
 			charset_mod = 0;
 		}
 		index++;
 	}
-	r[word_count] = 0;
+	return (-1);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**str_splitted;
 	int		word_count;
+	int		real_count_words;
 
 	if (s == NULL)
 		return (NULL);
@@ -100,6 +113,12 @@ char	**ft_split(char const *s, char c)
 	str_splitted = malloc(sizeof(char *) * (word_count + 1));
 	if (str_splitted == NULL)
 		return (NULL);
-	make_splits(s, c, str_splitted);
+	real_count_words = make_splits(s, c, str_splitted);
+	if (real_count_words != -1)
+	{
+		free_split(str_splitted, real_count_words);
+		return (NULL);
+	}
+	str_splitted[word_count] = 0;
 	return (str_splitted);
 }
